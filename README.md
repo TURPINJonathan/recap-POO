@@ -206,3 +206,21 @@ Il s'agit d'une méthode à insérer dans notre ``class Identite {}`` située da
         }
 }
 ```
+
+
+Nous pourrions résumer tout celà ainsi:  
+
+Si on reprend l'exemple du numéro de téléphone:  
+``private`` permettra à ce que personne ne puisse ni le voir ni le modifier.  
+Cependant nous pourrions avoir besoin que quelques personnes puissent y avoir accès, comme notre médecin ou la nounou par exemple. Alors, nous utiliserons la méthode ``getter`` afin de pouvoir rester joignable, uniquement pour ces personnes.  
+Enfin, il serait sans doute judicieux qu'au moins une personne puisse modifier le numéro, comme l'opérateur téléphonique. Dans ce cas, nous lui attribuerons la methode ``setter``.   
+
+Autre exemple, ta date d'anniversaire, sujet parfois sensible chez certain(e)s :  
+Il s'agit d'une donnée sensible, qu'on ne souhaite pas exposer à n'importe qui. Dans ce cas, nous indiquerons que la propriété est ``private``.  
+Par contre, il peut être utile que quelques personnes puissent la connaitre, comme ton mari/conjoint/chat (ne jamais cracher sur un potentiel cadeau). Dans ce cas, nous pourrons leur associer une methode ``getter`` afin qu'ils puissent lire cette donnée sans pour autant pouvoir la modifier.  
+Enfin, une seule personne pourrait être en mesure de modifier l'âge (c'est toi-même, et oui désolé mais tu vieillis chaque secondes qui passent). Tu es donc la seule détentrice des droits à modifier ton âge. Tu as donc une methode ``setter``.  
+
+Grosso modo:  
+``private`` = données ultra-confidentiel. On ne souhaite pas que n'importe qui puisse y avoir accès.  
+``getter`` = on donne accès à ces données, uniquement en lecture, à une poignée de personnes.  
+``setter`` = on donne un accès supplémentaire à d'autres personnes afin qu'ils puissent modifier les données.
