@@ -4,8 +4,8 @@ C'est un plan de fabrication, un moule.
 On les fabrique ainsi:
 ```php
 class Identite {
-    public $Nom; // Ceci est un propriété
-    public $Prenom; // Ceci est une autre propriété
+    public $Nom; // Ceci est un propriété (ou attribut)
+    public $Prenom; // Ceci est une autre propriété (ou attribut)
     // etc etc
 
     public $bg = false; 
@@ -28,7 +28,7 @@ class Indentite {
 ```
 
 
-# Les instances
+# Les instances (=objet)
 Dans une classe, on va pouvoir y couler des objets, on dit alors qu'on va les instanciers.  
 On instancie donc, depuis ``index.php`` de cette manière :
 ```php
@@ -65,7 +65,8 @@ object(Identite)[1]
 ### Seconde solution d'attribution de valeurs
 #### Ecriture d'un constructeur
 Nous pouvons également ajouter un *constructeur* afin d'attribuer les valeurs à la suite.  
-Pour cela, nous allons devoir faire appel à une fonction. Nous parlerons ici de **METHODE** (fonction = méthode).    
+Pour cela, nous allons devoir faire appel à une fonction. Nous parlerons ici de **METHODE** (fonction = méthode).   
+**ATTENTION : il ne peut y avoir qu'UN SEUL constructeur par class !**
 Comment construire notre construsteur :  
 ```php
 public function __construct($nom, $prenom, $bg=false) { 
@@ -139,7 +140,7 @@ Par exemple, pour accéder à notre fichier ``Identite.php``, nous avons du lui 
 
 Ici, nous devons déterminer s'il est possible de lire et d'écrire dans la propriété d'un objet via un code externe à la classe.
 - ``public`` = open bar (*profitez c'est pas tous les jours*), tout le monde peut faire ce qu'il veut des propriétés.
-- ``private`` = sécurisé, seul le code à l'intérieur de la classe pourra lire/écrire dans la propriété.
+- ``private`` = sécurisé, seul le code à l'intérieur de la classe pourra lire/écrire dans la propriété. C'est comme si la ou les données mises en `private` étaient dans un coffre-fort *(seul les getter et setter auront la clef pour ouvrir ou se servir dans le coffre)*
 - c'est exactement pareil avec les ``method``.
 Par exemple:
 
