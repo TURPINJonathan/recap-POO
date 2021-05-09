@@ -19,7 +19,7 @@ Il est important également de veiller à ce que la classe et le fichier commenc
 Par exemple :
 ```php
 // Ma classe ...
-class Indentite {
+class Identite {
     // ...
 }
  // ... porte le même nom que le fichier dans lequel la classe se situe
